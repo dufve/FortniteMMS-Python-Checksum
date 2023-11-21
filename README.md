@@ -1,6 +1,6 @@
 #     FortniteMMS-Python-Checksum
 
-This script is crafted to produce a checksum using specific inputs: a token, payload, and signature. Its checksum computation mirrors that used in Fortnite, playing a key role in accessing the game's matchmaking services.
+This script is made to mirror the checksum computation that is used in Fortnite, which plays a key role in accessing the game's matchmaking services.
 
 ### Input Variables
 
