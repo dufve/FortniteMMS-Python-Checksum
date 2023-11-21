@@ -5,15 +5,15 @@ This script is crafted to produce a checksum using specific inputs: a token, pay
 ### Input Variables
 
     Token: A string token, unique to each use case.
-    Payload: A base64 encoded payload, typically representing the data to be secured.
-    Signature: A base64 encoded signature, usually a unique identifier or key.
+    Payload: Your base64 encoded payload.
+    Signature: Your base64 encoded signature.
 
 ### Checksum Calculation Process
 
 - The checksum is calculated by following these steps
   - 1. Concatenation: The script forms a plaintext string by concatenating three parts: a subset of the payload (characters 10 to 20), the entire token, and a subset of the signature (characters 2 to 10).
   - 2. UTF-16 Encoding: This plaintext string is then encoded in UTF-16 using Little Endian byte order.
-  - 3. SHA1 Hashing: The UTF-16 encoded data is hashed using the SHA1 algorithm. SHA1 is a widely used cryptographic hash function that produces a 160-bit (20-byte) hash value.
+  - 3. SHA1 Hashing: The UTF-16 encoded data is hashed using the SHA1 algorithm to produce a 20-byte hash value.
   - 4. Hex Encoding and Upper Case Conversion: From the SHA1 hash, bytes 2 to 10 are extracted and converted into a hexadecimal string. This string is then transformed into uppercase letters to standardize the format.
   - 5. Output: The resulting uppercase hexadecimal string is the checksum.
 
