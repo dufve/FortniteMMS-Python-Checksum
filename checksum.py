@@ -29,11 +29,3 @@ def generate_checksum(token, payload, signature):
         # Handle potential errors
         print(f"An error occurred: {e}")
         return None
-
-# Example usage
-token = "Don'tMessWithMMS"
-payload = ""   # base64 encoded payload
-signature = "" # base64 encoded signature
-
-# Generate and print checksum
-print(generate_checksum(token, payload, signature))
